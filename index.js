@@ -5,6 +5,10 @@
     secure your api key => npm i dotenv
     make n/w calls => npm i axios
     start server => node index.js
+
+    // deploy node app in render
+    Build Command: npm install
+    Start Command: npm start
 */
 
 const dotenv = require('dotenv');
