@@ -11,6 +11,8 @@
     Start Command: npm start
 */
 
+const express = require('express');
+const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 const axios = require('axios');
@@ -56,4 +58,11 @@ bot.onText(/\/joke/, async (msg) => {
 //     bot.sendMessage(chatId, ` Hi ${chatName} please type the secret word to get specific replay. What was the WORD`);
 // });
 
-console.log('app is running');
+const PORT = process.env.PORT;
+app.get('/', (req, res) => {
+    res.send("Server is Up");
+});
+app.listen(PORT, () => {
+    console.log(`Running at PORT ${PORT}`);
+});
+// console.log('app is running');
